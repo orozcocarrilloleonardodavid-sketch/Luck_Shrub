@@ -1,0 +1,166 @@
+.contactos-header {
+    text-align: center;
+    padding: 30px 20px 10px;
+    color: #085041;
+}
+
+.contactos-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 20px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* FORMULARIO */
+.formulario-tarjeta {
+    background-color: #ffffffa0;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-tarjeta h2 {
+    color: #085041;
+    margin: 0;
+    font-size: 22px;
+}
+
+.formulario-tarjeta label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #085041;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #27a780d8;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #f9fffe;
+    transition: border 0.3s ease;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta textarea:focus {
+    border-color: #085041;
+}
+
+.formulario-tarjeta textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    background-color: #0f6e56;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background-color: #085041;
+}
+
+/* INFO DE CONTACTO */
+.info-tarjeta {
+    background-color: #ffffffa0;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-tarjeta h2 {
+    color: #085041;
+    margin: 0;
+    font-size: 22px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #333;
+}
+
+.info-icono {
+    font-size: 24px;
+    min-width: 36px;
+    text-align: center;
+}
+
+.info-item a {
+    color: #0f6e56;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* REDES SOCIALES */
+.redes-contenedor {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-red {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    transition: opacity 0.3s ease;
+}
+
+.btn-red:hover {
+    opacity: 0.85;
+}
+
+.btn-instagram {
+    background-color: #e1306c;
+    color: white;
+}
+
+.btn-facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.btn-tiktok {
+    background-color: #010101;
+    color: white;
+}

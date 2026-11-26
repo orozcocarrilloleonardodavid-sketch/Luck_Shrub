@@ -1,0 +1,100 @@
+.servicios-header {
+    text-align: center;
+    padding: 30px 20px 10px;
+    color: #085041;
+}
+
+.servicios-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 20px 40px;
+}
+
+.servicio-tarjeta {
+    background-color: #ffffffa0;
+    border-radius: 20px;
+    padding: 0;
+    max-width: 750px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.servicio-img {
+    width: 280px;
+    min-width: 280px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.servicio-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+.servicio-titulo {
+    font-size: 24px;
+    color: #085041;
+    margin: 0;
+}
+
+.servicio-descripcion {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+.servicio-precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0f6e56;
+    margin: 0;
+}
+
+.btn-cotizar {
+    background-color: #0f6e56;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cotizar:hover {
+    background-color: #085041;
+}
+
+.btn-volver {
+    background-color: transparent;
+    color: #0f6e56;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #0f6e56;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #0f6e56;
+    color: white;
+}
+
+.servicios-botones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}

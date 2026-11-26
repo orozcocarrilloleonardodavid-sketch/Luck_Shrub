@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Lucky Shrub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo de la pagina web" class="logo">
+        <h1 class="titulo-grande">Buena Suerte</h1>
+    </header>
+
+    <main>
+        <section class="login-contenedor">
+            <div class="login-tarjeta">
+
+                <!-- PESTAÑAS -->
+                <div class="pestanas">
+                    <button class="pestana activa" onclick="mostrarTab('login', this)">Iniciar sesión</button>
+                    <button class="pestana" onclick="mostrarTab('registro', this)">Registrarse</button>
+                </div>
+
+                <!-- FORMULARIO INICIAR SESIÓN -->
+                <div class="formulario visible" id="tab-login">
+                    <h2>👤 Iniciar sesión</h2>
+
+                    <div>
+                        <label for="login-email">Correo electrónico</label>
+                        <input type="email" id="login-email" placeholder="tucorreo@email.com">
+                        <p class="mensaje-error" id="error-login-email">Este campo es obligatorio.</p>
+                    </div>
+
+                    <div>
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" placeholder="Tu contraseña">
+                        <p class="mensaje-error" id="error-login-password">Este campo es obligatorio.</p>
+                    </div>
+
+                    <button class="btn-submit" onclick="iniciarSesion()">🔐 Iniciar sesión</button>
+
+                    <p class="formulario-texto">
+                        ¿No tienes cuenta?
+                        <a onclick="mostrarTab('registro', document.querySelectorAll('.pestana')[1])">Regístrate aquí</a>
+                    </p>
+                </div>
+
+                <!-- FORMULARIO REGISTRO -->
+                <div class="formulario" id="tab-registro">
+                    <h2>🌿 Crear cuenta</h2>
+
+                    <div>
+                        <label for="reg-usuario">Nombre de usuario</label>
+                        <input type="text" id="reg-usuario" placeholder="Tu nombre de usuario">
+                        <p class="mensaje-error" id="error-usuario">Este campo es obligatorio.</p>
+                    </div>
+
+                    <div>
+                        <label for="reg-email">Correo electrónico</label>
+                        <input type="email" id="reg-email" placeholder="tucorreo@email.com">
+                        <p class="mensaje-error" id="error-reg-email">Este campo es obligatorio.</p>
+                    </div>
+
+                    <div>
+                        <label for="reg-telefono">Teléfono</label>
+                        <input type="tel" id="reg-telefono" placeholder="+57 XXX XXX XXXX">
+                        <p class="mensaje-error" id="error-telefono">Este campo es obligatorio.</p>
+                    </div>
+
+                    <div>
+                        <label for="reg-password">Contraseña</label>
+                        <input type="password" id="reg-password" placeholder="Crea una contraseña">
+                        <p class="mensaje-error" id="error-reg-password">Este campo es obligatorio.</p>
+                    </div>
+
+                    <div>
+                        <label for="reg-password2">Confirmar contraseña</label>
+                        <input type="password" id="reg-password2" placeholder="Repite tu contraseña">
+                        <p class="mensaje-error" id="error-reg-password2">Este campo es obligatorio.</p>
+                    </div>
+
+                    <button class="btn-submit" onclick="registrarse()">✅ Crear cuenta</button>
+
+                    <p class="formulario-texto">
+                        ¿Ya tienes cuenta?
+                        <a onclick="mostrarTab('login', document.querySelectorAll('.pestana')[0])">Inicia sesión aquí</a>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="logo-footer-container">
+            <img src="logo.png" alt="Logo" class="logo-footer">
+        </div>
+        <div class="copyright">
+            <p>© 2026 Lucky Shrub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarTab(tab, boton) {
+            document.getElementById('tab-login').classList.remove('visible');
+            document.getElementById('tab-registro').classList.remove('visible');
+            document.getElementById('tab-' + tab).classList.add('visible');
+            document.querySelectorAll('.pestana').forEach(p => p.classList.remove('activa'));
+            boton.classList.add('activa');
+        }
+
+        function validarCampo(inputId, errorId, mensajePersonalizado) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            if (input.value.trim() === '') {
+                input.classList.add('input-error');
+                error.textContent = mensajePersonalizado || 'Este campo es obligatorio.';
+                error.classList.add('visible');
+                return false;
+            } else {
+                input.classList.remove('input-error');
+                error.classList.remove('visible');
+                return true;
+            }
+        }
+
+        function iniciarSesion() {
+            const emailOk = validarCampo('login-email', 'error-login-email');
+            const passOk = validarCampo('login-password', 'error-login-password');
+            if (emailOk && passOk) {
+                window.location.href = 'index.html';
+            }
+        }
+
+        function registrarse() {
+            const usuarioOk = validarCampo('reg-usuario', 'error-usuario');
+            const emailOk = validarCampo('reg-email', 'error-reg-email');
+            const telefonoOk = validarCampo('reg-telefono', 'error-telefono');
+            const passOk = validarCampo('reg-password', 'error-reg-password');
+
+            const pass = document.getElementById('reg-password').value.trim();
+            const pass2 = document.getElementById('reg-password2').value.trim();
+            const pass2Input = document.getElementById('reg-password2');
+            const pass2Error = document.getElementById('error-reg-password2');
+
+            let pass2Ok = false;
+            if (pass2 === '') {
+                pass2Input.classList.add('input-error');
+                pass2Error.textContent = 'Este campo es obligatorio.';
+                pass2Error.classList.add('visible');
+            } else if (pass !== pass2) {
+                pass2Input.classList.add('input-error');
+                pass2Error.textContent = 'Las contraseñas no coinciden.';
+                pass2Error.classList.add('visible');
+            } else {
+                pass2Input.classList.remove('input-error');
+                pass2Error.classList.remove('visible');
+                pass2Ok = true;
+            }
+
+            if (usuarioOk && emailOk && telefonoOk && passOk && pass2Ok) {
+                window.location.href = 'index.html';
+            }
+        }
+
+        /* quita el rojo - login */
+        document.getElementById('login-email').addEventListener('input', () => validarCampo('login-email', 'error-login-email'));
+        document.getElementById('login-password').addEventListener('input', () => validarCampo('login-password', 'error-login-password'));
+
+        /* quita el rojo - registro */
+        document.getElementById('reg-usuario').addEventListener('input', () => validarCampo('reg-usuario', 'error-usuario'));
+        document.getElementById('reg-email').addEventListener('input', () => validarCampo('reg-email', 'error-reg-email'));
+        document.getElementById('reg-telefono').addEventListener('input', () => validarCampo('reg-telefono', 'error-telefono'));
+        document.getElementById('reg-password').addEventListener('input', () => validarCampo('reg-password', 'error-reg-password'));
+        document.getElementById('reg-password2').addEventListener('input', () => {
+            const pass = document.getElementById('reg-password').value.trim();
+            const pass2 = document.getElementById('reg-password2').value.trim();
+            const pass2Input = document.getElementById('reg-password2');
+            const pass2Error = document.getElementById('error-reg-password2');
+            if (pass2 === '') {
+                pass2Input.classList.add('input-error');
+                pass2Error.textContent = 'Este campo es obligatorio.';
+                pass2Error.classList.add('visible');
+            } else if (pass !== pass2) {
+                pass2Input.classList.add('input-error');
+                pass2Error.textContent = 'Las contraseñas no coinciden.';
+                pass2Error.classList.add('visible');
+            } else {
+                pass2Input.classList.remove('input-error');
+                pass2Error.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+.promo-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.promo-tarjeta {
+    background-color: #ffffffa0;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.badge-descuento {
+    background-color: #27a780d8;
+    color: white;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 50px;
+    width: fit-content;
+    font-size: 14px;
+}
+
+.promo-titulo {
+    font-size: 32px;
+    margin: 0;
+    color: #085041;
+}
+
+.promo-descripcion {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+.promo-caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 15px;
+}
+
+.promo-precios {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.precio-antes {
+    font-size: 16px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.precio-ahora {
+    font-size: 28px;
+    font-weight: bold;
+    color: #085041;
+}
+
+.descuento-badge {
+    background-color: #e24b4a;
+    color: white;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.promo-botones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-comprar {
+    background-color: #0f6e56;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #085041;
+}
+
+.btn-volver {
+    background-color: transparent;
+    color: #0f6e56;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid #0f6e56;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #0f6e56;
+    color: white;
+}

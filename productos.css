@@ -1,0 +1,113 @@
+.productos-header {
+    text-align: center;
+    padding: 30px 20px 10px;
+    color: #085041;
+}
+
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px 20px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.producto-card {
+    background-color: #ffffffa0;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    overflow: hidden;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto-card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.producto-card-titulo {
+    font-size: 20px;
+    color: #085041;
+    margin: 0;
+}
+
+.producto-card-descripcion {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+.producto-card-disponibles {
+    background-color: #e1f5ee;
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #085041;
+}
+
+.producto-card-precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0f6e56;
+    margin: 0;
+}
+
+.producto-card-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.btn-ver {
+    background-color: #0f6e56;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver:hover {
+    background-color: #085041;
+}
+
+.btn-comprar-card {
+    background-color: transparent;
+    color: #0f6e56;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    border: 2px solid #0f6e56;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar-card:hover {
+    background-color: #0f6e56;
+    color: white;
+}

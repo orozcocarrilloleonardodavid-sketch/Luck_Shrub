@@ -1,0 +1,92 @@
+.producto-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.producto-tarjeta {
+    background-color: #ffffffa0;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.producto-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.producto-titulo {
+    font-size: 32px;
+    margin: 0;
+    color: #085041;
+}
+
+.producto-descripcion {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+.producto-disponibles {
+    background-color: #e1f5ee;
+    border-radius: 50px;
+    padding: 8px 18px;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: bold;
+    color: #085041;
+}
+
+.producto-precio {
+    font-size: 30px;
+    font-weight: bold;
+    color: #085041;
+    margin: 0;
+}
+
+.producto-botones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-comprar {
+    background-color: #0f6e56;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #085041;
+}
+
+.btn-volver {
+    background-color: transparent;
+    color: #0f6e56;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid #0f6e56;
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #0f6e56;
+    color: white;
+}

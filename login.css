@@ -1,0 +1,191 @@
+.login-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.login-tarjeta {
+    background-color: #ffffffa0;
+    border-radius: 20px;
+    padding: 35px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* PESTAÑAS */
+.pestanas {
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid #27a780d8;
+}
+
+.pestana {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #0f6e56;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.pestana.activa {
+    background-color: #27a780d8;
+    color: white;
+}
+
+/* FORMULARIOS */
+.formulario {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario.visible {
+    display: flex;
+}
+
+.formulario h2 {
+    color: #085041;
+    margin: 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+.formulario label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #085041;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #27a780d8;
+    border-radius: 12px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #f9fffe;
+    transition: border 0.3s ease;
+}
+
+.formulario input:focus {
+    border-color: #085041;
+}
+
+.btn-submit {
+    background-color: #0f6e56;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #085041;
+}
+
+.formulario-texto {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.formulario-texto a {
+    color: #0f6e56;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formulario-texto a:hover {
+    text-decoration: underline;
+}
+
+/* BOTÓN NAV */
+.btn-login-nav {
+    background-color: #085041;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-login-nav:hover {
+    background-color: #0f6e56;
+}
+
+.formulario-texto a {
+    color: #0f6e56;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formulario-texto a:visited {
+    color: #0f6e56;     /* evita que se ponga morado después de visitar */
+}
+
+.pestana,
+.pestana:visited,
+.pestana:focus {
+    outline: none;      /* quita el borde azul al hacer clic */
+}
+
+.input-error {
+    border-color: #e24b4a !important;
+    background-color: #fff5f5 !important;
+}
+
+.mensaje-error {
+    color: #e24b4a;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+.mensaje-error.visible {
+    display: block;
+}
+
+.btn-submit {
+    background-color: #0f6e56;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-decoration: none;    /* quita el subrayado */
+}
+
+.btn-submit:visited,
+.btn-submit:link,
+.btn-submit:active {
+    color: white;             /* fuerza el color blanco en todos los estados */
+    text-decoration: none;
+}

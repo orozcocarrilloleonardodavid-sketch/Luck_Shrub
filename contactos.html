@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - Lucky Shrub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contactos.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo de la pagina web" class="logo">
+        <h1 class="titulo-grande">Buena Suerte</h1>
+    </header>
+
+    <nav>
+        <div class="nav-contenedor">
+            <ul>
+                <li><a href="index.html"><h2>Inicio</h2></a></li>
+                <li><a href="servicios.html"><h2>Servicios</h2></a></li>
+                <li><a href="productos.html"><h2>Productos</h2></a></li>
+                <li><a href="contactos.html"><h2>Contactos</h2></a></li>
+            </ul>
+            <div class="barra-busqueda">
+                <input type="text" placeholder="Buscar...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h2 class="contactos-header">Contáctanos</h2>
+
+        <div class="contactos-contenedor">
+
+            <!-- FORMULARIO -->
+            <div class="formulario-tarjeta">
+                <h2>📩 Envíanos un mensaje</h2>
+
+                <div>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre">
+                </div>
+
+                <div>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="correo@gmail.com">
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <button class="btn-enviar">✉️ Enviar mensaje</button>
+            </div>
+
+            <!-- INFO DE CONTACTO -->
+            <div class="info-tarjeta">
+                <h2>📞 Información de contacto</h2>
+
+                <!-- WhatsApp -->
+                <div class="info-item">
+                    <span class="info-icono">💬</span>
+                    <div>
+                        <p style="margin:0; font-weight:bold; color:#085041;">WhatsApp</p>
+                        <a href="https://wa.me/+57 311 318 7855">+57 311 318 7855</a>
+                    </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="info-item" style="flex-direction: column; align-items: flex-start;">
+                    <p style="margin:0; font-weight:bold; color:#085041;">🌐 Redes sociales</p>
+                    <div class="redes-contenedor">
+                        <a href="https://instagram.com/leoxz_xzt" class="btn-red btn-instagram">
+                            📸 Instagram
+                        </a>
+                        <a href="https://facebook.com/share/1GpT7DtdRt/" class="btn-red btn-facebook">
+                            👍 Facebook
+                        </a>
+                        <a href="https://tiktok.com/@orozco_leonardo" class="btn-red btn-tiktok">
+                            🎵 TikTok
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="logo-footer-container">
+            <img src="logo.png" alt="Logo" class="logo-footer">
+        </div>
+        <div class="copyright">
+            <p>© 2026 Lucky Shrub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
